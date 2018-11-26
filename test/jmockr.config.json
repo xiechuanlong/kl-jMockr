@@ -1,0 +1,38 @@
+{
+  "authConfig": {
+    "username": "Boss19860407",
+    "password": "qiqiab12345^"
+  },
+  "proxyConfig": {
+    "enable": false,
+    "useIP": false,
+    "protocol": "https",
+    "domain": "www.baidu.com",
+    "ip": "127.0.0.1",
+    "enablePort": false,
+    "port": 4000
+  },
+  "ftlFilePath": "./webapp/WEB-INF/ftl",
+  "moduleFtlPathes": [],
+  "dataPath": {
+    "urlMap": "./mock/urlMap.json",
+    "url200": "./mock/ajax/retCode200.json",
+    "commonFtl": "./mock/commonFtlData",
+    "pageFtl": "./mock/ftlMockData",
+    "ajax": "./mock/ajax"
+  },
+  "serverConfig": {
+    "port": 4500,
+    "static": "./webapp",
+    initialURL: '',
+    noOpenPage: true
+  },
+  liveReload: {
+      "watch": [
+          './webapp/'
+      ],
+      "ignore": [
+          "../../ignore/**/*.*"
+      ]
+  }
+}
