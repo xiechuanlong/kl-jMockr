@@ -16,15 +16,18 @@ function init(app) {
                 logUtil.logRequest(req);
                 superagent[m](url)
                     .set({
+                        Accept: req.get('Accept'),
                         'Content-Type': req.get('Content-Type'),
-                        'User-Agent': req.get('User-Agent')
+                        'User-Agent': req.get('User-Agent'),
+                        'X-Requested-With': req.get('X-Requested-With'),
+                        'Accept-Language': req.get('Accept-Language'),
+                        'Accept-Encoding': req.get('Accept-Encoding'),
                     })
                     .query(req.query)
                     .send(req.body)
                     .end((err, sres) => {
                         if (err) {
                             console.info('Error in sres');
-                            logUtil.logAgentRes(sres);
                             res.status(500)
                                 .json({
                                     retCode: 500,
@@ -33,7 +36,6 @@ function init(app) {
                         } else {
                             console.info('Response arrived.');
                             try {
-                                logUtil.logAgentRes(sres);
                                 res.json(JSON.parse(sres.text));
                             } catch(e) {
                                 
