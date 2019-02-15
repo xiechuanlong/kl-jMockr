@@ -19,7 +19,7 @@ function init(app) {
                         Accept: req.get('Accept'),
                         'Content-Type': req.get('Content-Type'),
                         'User-Agent': req.get('User-Agent'),
-                        'X-Requested-With': req.get('X-Requested-With'),
+                        'X-Requested-With': req.get('X-Requested-With') || 'XMLHttpRequest',
                         'Accept-Language': req.get('Accept-Language'),
                         'Accept-Encoding': req.get('Accept-Encoding'),
                     })
