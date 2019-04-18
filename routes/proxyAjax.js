@@ -1,4 +1,5 @@
 const proxyCfg = require('../scanner/config').proxyConfig;
+const cfg = require('../scanner/index').authConfig;
 const authTool = require('../auth/cas');
 const logUtil = require('../util/logUtil');
 
@@ -16,6 +17,7 @@ function init(app) {
                 logUtil.logRequest(req);
                 superagent[m](url)
                     .set({
+                        entranceEnv: cfg.entranceEnv || '',
                         Accept: req.get('Accept'),
                         'Content-Type': req.get('Content-Type'),
                         'User-Agent': req.get('User-Agent'),

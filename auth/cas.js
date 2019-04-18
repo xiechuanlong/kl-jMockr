@@ -67,7 +67,11 @@ function login() {
                             reject(err);
                         } else {
                             let tempUrl = cfg.systemHost;
+                            entranceEnv = cfg.entranceEnv;
                             superagent.get(tempUrl)
+                                .set({
+                                    'entranceEnv': entranceEnv || ''
+                                })
                                 .end((err, res) => {
                                     if (err) {
                                         console.info('Login error.');
