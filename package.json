@@ -1,6 +1,6 @@
 {
   "name": "kl-jmockr",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "for seperate frontend and backend development",
   "main": "app.js",
   "scripts": {
