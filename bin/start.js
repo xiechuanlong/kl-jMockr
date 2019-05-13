@@ -15,7 +15,6 @@ const app = require('../app');
 let args = parseArgv(process.argv.slice(2));
 
 index(args);
-
 function index(args) {
     sayHi();
     if (argsUnknown(args) || args.h || args.help) {
