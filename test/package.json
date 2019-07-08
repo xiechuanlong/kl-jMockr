@@ -4,8 +4,5 @@
         "testn": "node ../bin/start -n",
         "tests": "node ../bin/start -s",
         "env": "node ../bin/env/start"
-    },
-    "dependencies": {
-        "@kaola/jenv": "0.0.1"
     }
 }
