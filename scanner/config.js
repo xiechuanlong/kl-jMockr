@@ -10,5 +10,4 @@ if(isUndefined(config.authConfig.entranceEnv)) {
 if(isUndefined(config.proxyConfig.enable )) {
     config.proxyConfig.enable = config.proxyConfig.enable || envData.isProxy
 }
-console.log(config, 5555555555555555)
 module.exports = config;
